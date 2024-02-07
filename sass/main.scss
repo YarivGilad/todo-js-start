@@ -8,9 +8,15 @@
 * Add your own CSS code below... 
 */
 body{
-  background-color: rgb(182, 215, 255);
+    background-color: rgb(182, 215, 255);
+    padding-top: 10rem;
+    @include flex-box($ai:flex-start);
+    .wrapper{
 
-  @include flex-box(column, center, center);
+        border:red solid 2px;
+        // width: 50rem;
+        // margin: 0 auto;
 
-  
+    }
+
 }
