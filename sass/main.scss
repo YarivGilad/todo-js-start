@@ -1,0 +1,16 @@
+@import "reset";
+@import "base";
+@import "mixins";
+@import "constants";
+@import "typography";
+
+/* 
+* Add your own CSS code below... 
+*/
+body{
+  background-color: rgb(182, 215, 255);
+
+  @include flex-box(column, center, center);
+
+  
+}
