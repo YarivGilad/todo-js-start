@@ -8,8 +8,8 @@
 * Add your own CSS code below... 
 */
 body{
-  background-color: rgb(182, 215, 255);
-
+  background-color: rgb(191, 191, 191);
+  color: red;
   @include flex-box(column, center, center);
 
   
