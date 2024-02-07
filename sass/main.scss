@@ -8,9 +8,12 @@
 * Add your own CSS code below... 
 */
 body{
+  // @include flex-box(column, center, center);
+  @include flex-box($ai:flex-start);
   background-color: rgb(191, 191, 191);
   color: red;
-  @include flex-box(column, center, center);
-
+  .wrapper{
+    border: red solid 2px;
+  }
   
 }
