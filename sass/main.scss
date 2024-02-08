@@ -7,10 +7,145 @@
 /* 
 * Add your own CSS code below... 
 */
-body{
-  background-color: rgb(182, 215, 255);
+html {
+  font-size: 10px;
+}
 
-  @include flex-box(column, center, center);
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Poppins;
 
-  
+  h1 {
+    font-family: Poppins;
+    color: #AA78A6;
+    font-size: 7rem;
+    margin: 2rem 0 2rem 0;
+
+    span {
+      color: darken(#AA78A6, 20%);
+    }
+  }
+
+  .wrapper {
+    background: #d7fdf0d0;
+    width: 60rem;
+    box-shadow: 0px 5px 10px rgb(136, 184, 200);
+    border-radius: 6px;
+
+  }
+
+  .user-form {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 2rem 0;
+
+    ::placeholder {
+      opacity: 0.5;
+      font-size: 2rem;
+
+    }
+
+    .task-input {
+      min-width: 65%;
+      height: 4rem;
+      border-radius: 6px;
+      border: 1px solid;
+    }
+
+    .add-button {
+      background-color: darken(#AA78A6, 20%);
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-family: Poppins;
+      font-size: 100%;
+      padding: 0 25px;
+
+      &:hover {
+        background: #AA78A6;
+      }
+    }
+  }
+
+  .todo-item {
+    display: flex;
+    // background-color: #008000;
+    position: relative;
+    padding: 1.5rem 0 1.5rem 0;
+    border: 1px solid rgba(128, 128, 128, 0.333);
+    border-right: transparent;
+    border-left: transparent;
+    width: 60rem;
+
+    &:hover {
+      .fa-solid {
+        color: darken(#f41919, 10%);
+        display: block;
+      }
+    }
+
+    .check {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      left: 1.3rem;
+
+    }
+
+    .label-task {
+
+      margin-left: 2.5rem;
+      font-size: 2.5rem;
+      font-weight: lighter;
+
+    }
+
+    .delete-button {
+      display: flex;
+      justify-content: flex-end;
+      align-content: flex-end;
+      margin-left: 32rem;
+
+
+      .fa-solid {
+        font-size: 2.5rem;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .footer {
+    font-size: 1.5rem;
+
+    display: flex;
+    // background-color: tomato;
+    padding: 1rem 0 1rem 0;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7rem;
+
+    .filters-box {
+      margin-left: 3rem;
+    }
+
+    .filter {
+      font-family: Poppins;
+      font-size: 1.5rem;
+      padding: 0.3rem;
+
+      &:hover {
+        border: 1px solid darken(#AA78A6, 20%);
+      }
+
+      .completed {
+        text-decoration: line-through;
+      }
+    }
+  }
+
 }

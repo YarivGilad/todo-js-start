@@ -1,14 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="sass/main.scss">
-  </head>
-  <body>
-    <div id="app">Todo app</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="sass/main.scss">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>todo <span>list</span></h1>
+    <div class="wrapper">
+      <form action="" class="user-form">
+        <input type="text" class="task-input" placeholder="Add a new task">
+        <button class="add-button">Add</button>
+      </form>
+      <ul class="todo-list">
+        <li class="todo-item">
+          <input type="checkbox" class="check">
+          <label for="check" class="label-task">Buy grocceries</label>
+          <button class="delete-button"><i class="fa-solid fa-circle-xmark"></i></button>
+        </li>   
+      </ul>
+      <footer class="footer">
+        <span>1 item left</span>
+        <div class="filters-box">
+          <button class="filter all">All</button>
+          <button class="filter active">Active</button>
+          <button class="filter completed">Completed</button>
+        </div>
+        <a href="#">Clear completed</a>
+      </footer>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/18ea69b55f.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

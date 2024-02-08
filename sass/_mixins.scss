@@ -9,6 +9,6 @@
 @mixin flex-box($dir:row, $jc: center, $ai: center){
   display:flex;
   flex-direction: $dir;
-  justify-content: $jc;
+  // justify-content: $jc;
   align-items: $ai;
 }
