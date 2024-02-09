@@ -1,45 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="sass/main.scss">
+    <link rel="stylesheet" href="sass/main.scss" />
   </head>
   <body>
-    <div>
-      <div class="wrapper">
-        <h1>Todo app</h1>
-        <div class="content">
-        <form>
-          <input type="text" id="task-input">
-          <button>Add</button>
-        </form>
-        <ul class="todo-list">
-          <li class="todo-item">
-            <input type="checkbox" id="check">
-            <label for="check">Buy milk</label>
-            <span>X</span>
-          </li>
-        </ul>
-        <footer>
-          <span>2 items left</span>
-          <div class="filters-box">
-            <button class="filter-btn">All</button>
-            <button class="filter-btn">Active</button>
-            <button class="filter-btn">Completed</button>
-          </div>
-          <a href="#">Clear completed</a>
-        </footer>
-      </div>
-      </div>
+    <div class="wrapper">
+      <h1>Todo List</h1>
+      <form>
+        <input type="text" id="task-input" />
+        <button id="add-btn">Add</button>
+      </form>
+      <ul class="todo-list">
+        <li class="todo-item">
+          <input type="checkbox" id="check" />
+          <span class="delete-btn"><i class="fa-regular fa-trash-can"></i></span>
+        </li>
+      </ul>
+      <footer>
+        <span>2 items left</span>
+        <div class="filters-container">
+          <button class="filter-btn">All</button>
+          <button class="filter-btn">Active</button>
+          <button class="filter-btn">Completed</button>
+        </div>
+        <a href="#">Clear Completed</a>
+      </footer>
     </div>
 
-
-
-
-
-    <script type="module" src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a3ef6dc515.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
