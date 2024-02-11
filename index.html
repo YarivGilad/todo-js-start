@@ -1,45 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="sass/main.scss">
-  </head>
-  <body>
-    <div>
-      <div class="wrapper">
-        <h1>Todo app</h1>
-        <div class="content">
-        <form>
-          <input type="text" id="task-input">
-          <button>Add</button>
-        </form>
-        <ul class="todo-list">
-          <li class="todo-item">
-            <input type="checkbox" id="check">
-            <label for="check">Buy milk</label>
-            <span>X</span>
-          </li>
-        </ul>
-        <footer>
-          <span>2 items left</span>
-          <div class="filters-box">
-            <button class="filter-btn">All</button>
-            <button class="filter-btn">Active</button>
-            <button class="filter-btn">Completed</button>
-          </div>
-          <a href="#">Clear completed</a>
-        </footer>
-      </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo app</title>
+  <link rel="stylesheet" href="sass/main.scss">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Todo app</h1>
+    <div class="content">
+      <form action="">
+        <input type="text" placeholder="Your next task" id="input">
+        <button class="add">Add</button>
+      </form>
+
+      <ul id="listContainer">
+        <!-- <li class="marked">test</li> -->
+      </ul>
+      <footer class="footer">
+        <span><span class="count">0</span>items left</span>
+        <div class="filter">
+          <button class="btn all">All</button>
+          <button class="btn active">Active</button>
+          <button class="btn completed">Completed</button>
+        </div>
+      </footer>
     </div>
-
-
-
-
-
-    <script type="module" src="js/main.js"></script>
-  </body>
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
 </html>

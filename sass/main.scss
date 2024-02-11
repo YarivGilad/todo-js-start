@@ -7,80 +7,105 @@
 /* 
 * Add your own CSS code below... 
 */
-body{
-  background-color: rgb(182, 215, 255);
-  padding-top: 10rem;
-  @include flex-box($ai:flex-start);
+body {
+  background: #7dd56f;
+
   .wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    // width: 50rem;
-    // margin: 0 auto;
+    align-items: center;
+    justify-content: flex-start;
+
     h1 {
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .content {
       background: white;
       padding: 1rem;
-      box-shadow: 0rem 2rem 4rem rgba(0,0,0,1);
-      min-width: 50rem;
-      line-height: 2.8rem;
-      font-size: 2rem;
-      font-weight: 400;
+      width: 50rem;
+      border-radius: 1rem;
+
       display: flex;
       flex-direction: column;
-      border-radius: 5px;
+      // align-items: center;
+      justify-content: flex-start;
 
       form {
-        flex: 1;
         display: flex;
-        #task-input {
-          padding: 0.5rem;
+        flex: 1;
+
+        input {
+          display: flex;
           flex: 1;
+          padding: 1rem;
         }
-        button {
-          padding: 1rem 2rem;
-          background-color: lightgrey;
-          border: 1px black solid;
+
+        .add {
+          padding: 1rem;
+          border: 1px solid black;
+          border-radius: 1px;
+          background: rgb(245, 243, 243);
         }
       }
-      .todo-list {
-        margin-top: 1rem;
+
+      ul {
+        margin-top: 1.5rem;
+
+        li {
+          list-style: none;
+          font-size: 1.6rem;
+          margin-left: 1rem;
+          margin-top: 0.8rem;
+          position: relative;
+          cursor: pointer;
+        }
+        
+        li:before {
+          content: '⬜';
+          margin-right: 0.5rem;
+        }
+        li.marked {
+          text-decoration: line-through;
+          color: grey;
+        }
+        li.marked::before {
+          content: '✅';
+        }
+        li span {
+          position: absolute;
+          right: 10px;
+        }
+        li span:hover {
+          background: lightgrey;
+          cursor: pointer;
+          border-radius: 5px;
+        }
       }
+
       footer {
         display: flex;
-        justify-content: row;
         justify-content: space-between;
-        font-size: 1.4rem;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
 
-        .filters-box {
-          display: flex;
-          gap: 1.1rem;
-          font-size: 1rem;
-
-          .filter-btn:hover {
-            border: 0.1rem solid cyan;
-            border-radius: 0.3rem;
-            padding: 0.5rem;
-          }
-          .filter-btn:active {
-            border: 0.1rem solid deeppink;
-            border-radius: 0.3rem;
-            padding: 0.5rem;
-          }
-          .filter-btn:focus {
-            border: 0.1rem solid deeppink;
-            border-radius: 0.3rem;
-            padding: 0.5rem;
-          }
+        .filter .btn {
+          background: white;
+          border: 1px solid white;
+          padding: 3px;
+          border-radius: 5px;
+          font-size: 1.1rem;
+          margin: 2px;
+          cursor: pointer;
+        }
+        .btn:hover {
+          border: 1px solid #da75c9;
+        }
+        .btn:focus {
+          border: 1px solid #7dd56f;
         }
       }
     }
   }
-  
 }
