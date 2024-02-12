@@ -12,6 +12,8 @@ const form = $("form");
 const todoList = $("ul.todo-list");
 const taskInput = $("#task-input");
 
+const deleteBtn = $(".delete-btn");
+
 //global variables
 const todos = [];
 
@@ -19,6 +21,7 @@ init();
 
 function init() {
   form.addEventListener("submit", onFormSubmit);
+  
 }
 
 function onFormSubmit(event) {
