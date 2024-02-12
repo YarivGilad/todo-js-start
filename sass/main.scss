@@ -8,43 +8,200 @@
 * Add your own CSS code below... 
 */
 body{
-  // @include flex-box(column, center, center);
   @include flex-box($ai:flex-start);
   background-color: rgb(191, 191, 191);
-  color: red;
+  color: rgb(255, 255, 255);
   padding-top: 10rem;
 
   .wrapper{
-    // border: rgb(246, 255, 0) solid 2px;
-    padding: 20rem;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #4a4a4a7e;
+    border-radius: 18px;
+    box-shadow: 0px 20px 10px 15px rgba(0, 0, 0, 0.35);
+    border: rgba(35, 93, 111, 0.88) inset 9px;
   }
   .top-header{
     margin-bottom: 2.5rem;
   }
+//   .second-panel {
+//      padding: 5rem;
+//     background-color: rgba(255, 255, 255, 0.2) 50%, transparent 50%, transparent;
+//     box-shadow: 0 0 20px 15px rgb(0 0 0 / 15%);
+//     border-radius: ($border-r - 13%);
+//     background-color: rgba(223, 223, 223, 0.123);
+//     border: $main-color solid 2px;
+//     // }
+// }
+ 
+// .pt1 {
+//     background-size: 50px 50px;
+//     background-color: #343a4045;
+//     background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+//     background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+//     background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+//     background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+//     background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+// }
+
+
   .second-panel{
     padding: 5rem;
-    background-color: rgb(223, 223, 223);
-    box-shadow: 0 20px 15px 15px rgb(64, 64, 64, 0.3);
+    background-color: rgba(223, 223, 223, 0.123);
+    background-color: #959595;
+    border-radius: 2px 101px / 95px;
+    box-shadow: 0px 10px 6px 6px rgba(0,0,0, 0.15);
+    // border-radius: ($border-r - 13%);
+    // border: rgba(35, 93, 111, 0.55) inset 6px;
   }
-  .frm{
+
+  // .frm{
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 30rem;
+  //   border-radius: 2px 101px / 95px;
+  //   background-color: rgb(67, 67, 67);
+  //   border: $main-color solid 2px;
+  // }
+  // border-radius: $border-r;
+  // border: rgb(255, 0, 0) solid 2px;
+
+  .frm {
+    /* Set the width of the form */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30rem;
+    width: 100%; 
+    /* Add any other styling for the form */
+
+    border-radius: 2px 101px / 95px;
+      background-color: rgb(67, 67, 67);
+      border: $main-color solid 2px;
+  }
+  
+  #task-input {
+    width: 100%;
+    flex: 1;
+    padding: 10px;
+    padding-right: 15rem;
+    border: 1px solid #1c1c1c;
+    border-radius: 4px;
+    margin-left: 10rem;
+    margin-right: 1rem;
+    /* Add any other styling for the input */
+
+  }
+
+  // #task-input{
+  //   flex: 1;
+  //   padding: 10px;
+  //   padding-right: 15rem;
+  //   border: 1px solid #1c1c1c;
+  //   border-radius: 4px;
+  //   margin-left: 10rem;
+  //   margin-right: 1rem;
+  // }
+
+  .list-ui{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(rgba(0, 0, 0, 0.425), rgb(255, 255, 255, 0.155));
+    border: rgba(35, 93, 111, 0.33) inset 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+  }
+
+  .todo-list{
+    align-items: start;
+    // margin-top: $small-margin;
     // border: rgb(255, 0, 0) solid 2px;
   }
-  #task-input{
-    padding: 1rem;
-    margin-right: 2.5%;
-  }
-  .todo-list{
-    border: blue solid 2px;
+  .todo-items{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease;
   }
   .add-btn{
-    padding-left: 3%;
-    padding-right: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    // border: rgb(0, 255, 42) solid 2px;
+    @include btn-grp;
+    background-color: $main-color;
+    color: #fff;
+    border: rgba(63, 63, 63, 0.399) solid 2px; 
+  }
+
+  .rounded-border-gradient{
+    inline-size: var(--size-content-1);
+    aspect-ratio: var(--ratio-widescreen);
+    padding: 3rem;
+    border: #c300ff solid 2px;
+    background: 
+    linear-gradient(var(--surface-1), var(--surface-1)) padding-box, 
+    var(--gradient-1) border-box;
+    // border: solid var(--size-2) transparent;
+  }
+  
+  @import "https://unpkg.com/open-props" layer(design.system);
+  @import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+  
+  @layer demo {
+    .add-btn-border-gradient {
+      border-radius: var(--radius-4);
+      inline-size: var(--size-content-1);
+      aspect-ratio: var(--ratio-widescreen);
+      border-radius: var(--radius-4);
+      background-image: 
+      linear-gradient(var(--surface-1), var(--surface-1)) padding-box, 
+      var(--gradient-1) border-box;
+      // border: solid var(--size-2) transparent;
+    }
+  }
+
+  // @layer demo.support {
+  //   body {
+  //     display: grid;
+  //     place-content: center;
+  //     padding: var(--size-5);
+  //     gap: var(--size-5);
+  //   } 
+  // }
+
+
+  .add-btn:hover {
+    background-color: $secondary-color;
+  }
+  .footer-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $small-margin;
+    // border: rgb(0, 234, 255) solid 2px;
+  }
+  .filter-box{
+    margin-left: 1rem;
+    // border: rgb(0, 30, 255) solid 2px;
+  }
+  .filter-btn{  
+    @include btn-grp;
+    padding: $small-margin;
+  }
+  .filter-btn:hover {
+    background-color: rgba(223, 223, 223, 0.251);
+    outline: $main-color solid 2px;
+  }
+  #clear-btn{
+    padding: $small-margin;
+    // border: rgb(0, 30, 255) solid 2px;
+  }
+  #items-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $small-margin;
+    // border: rgb(0, 30, 255) solid 2px;
   }
 }

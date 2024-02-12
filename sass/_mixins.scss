@@ -12,3 +12,10 @@
   justify-content: $jc;
   align-items: $ai;
 }
+
+@mixin btn-grp {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
