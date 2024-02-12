@@ -4,13 +4,118 @@
 @import "constants";
 @import "typography";
 
-/* 
-* Add your own CSS code below... 
-*/
-body{
+/* Add your own CSS code below... */
+body {
   background-color: rgb(182, 215, 255);
+  @include flex-box(column, start, center);
+  font-family: 'Gill Sans';
 
-  @include flex-box(column, center, center);
+  .wrapper {
+    border: 2px solid rgb(170, 213, 27);
+    margin-top: 10rem;
+    padding: 5rem 8rem;
+    box-shadow: 10px 5px 5px rgba(167, 224, 43, 0.568);
+    opacity: 0.7;
+    border-radius: 10rem;
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+      position: relative;
+  }
 
+  h1 {
+    padding-bottom: 5rem;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(76, 56, 205);
+  }
+
+  form {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightcyan;
+    border-radius: 3rem;
+  }
+
+  #task-input {
+    height: 1rem;
+    width: 30rem;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem;
+    font-weight: 1.4rem;
+  }
+
+  ul.todo-list {
+    li.todo-item {
+      input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        left: 9rem;
+        
+      }
   
+      label {
+        display: inline-block;
+        padding-left: 30px;
+        background-image: url(/images/square-button.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        padding-bottom: 1rem;
+        line-height: 2.5rem;
+
+      }
+      
+      span {
+         position: absolute;
+         right: 9rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 2.2rem;
+        color: #555;
+        text-align: center;
+        border-radius: 50%;
+      }
+      span:hover {
+        background: #edeef0;
+        
+        
+      }
+      
+      input[type="checkbox"]:checked + label {
+        background-image: url(/images/check.png);
+        text-decoration: line-through;
+      }
+    }
+  }
+  li.todo-item {
+  padding-top: 1rem;
+  }
+ 
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+  }
+
+  form #add-task-btn {
+    padding: 1.6rem 5rem;
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    color: rgb(76, 56, 205);
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 4rem;
+    font-family: 'Gill Sans';
+    font-weight: 700;
+    border: none;
+    outline: none;
+  }
 }

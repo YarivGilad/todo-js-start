@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="sass/main.scss">
   </head>
   <body>
-    <div id="app">Todo app</div>
+<div>
+    <div class="wrapper">
+        <h1>Rainbow To-Do List</h1>
+         <form>
+           <input type="text"  id="task-input" placeholder="Add your task">
+           <button id="add-task-btn" type="button">Add</button>
+         </form>
+     <ul class="todo-list">
+         <!-- <li class="todo-item">
+            <input type="checkbox"  id="check">
+            <label for="check"> Buy banana</label>
+            <span></span>
+         </li> -->
+      </ul>
+      <footer>
+        <span>2 items left</span>
+         <div class="filters-box">
+            <button class="filter-btn">All</button>
+             <button class="filter-btn">Active</button>
+             <button class="filter-btn">Completed</button>
+        </div>
+        <a href="#">Clear completed</a>
+      </footer>
+    </div>
+</div>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
