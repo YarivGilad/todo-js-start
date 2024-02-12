@@ -1,17 +1,27 @@
 <mxfile host="65bd71144e">
     <diagram id="gzu5aeWqApXcFYRcK9gk" name="Page-1">
-        <mxGraphModel dx="320" dy="827" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="807" dy="449" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="7" style="edgeStyle=none;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;mark task as complited/ not&lt;/font&gt;" style="whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
-                    <mxGeometry x="352" y="26" width="183" height="60" as="geometry"/>
+                    <mxGeometry x="275.5" y="137" width="183" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="&lt;font color=&quot;#000000&quot;&gt;delete task&lt;/font&gt;" style="whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="168" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="301" y="253" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#6a00ff;strokeColor=#3700CC;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="364" y="148"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="5" value="add new task" style="whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=#000000;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" vertex="1">
-                    <mxGeometry x="129" y="218" width="150" height="60" as="geometry"/>
+                    <mxGeometry x="292" y="21" width="150" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
