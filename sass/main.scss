@@ -4,7 +4,7 @@
 @import "constants";
 @import "typography";
 
-/* Add your own CSS code below... */
+/* Add your own CSS code below....*/
 body {
   background-color: rgb(182, 215, 255);
   @include flex-box(column, start, center);
