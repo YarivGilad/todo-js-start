@@ -49,6 +49,23 @@ body{
       }
       .todo-list {
         margin-top: 1rem;
+
+        .todo-item {
+          @include flex-box();
+          padding: 0 0.5rem;
+          
+          label{
+            // border:red solid 1px;
+            flex:1;
+            padding: .5rem 1rem;
+          }
+          
+          svg {
+             width: 2rem;
+             height: 2rem;
+             fill: deeppink;
+           }
+        }
       }
       footer {
         display: flex;
