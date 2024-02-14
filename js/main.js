@@ -19,10 +19,15 @@ const randNum = (Math.random() * (256**3) ).toString(36);
 const todos = [
     {
         id: keyGen(),
-        task: 'buy mil',
+        task: 'buy milk',
         comleted:false,
     }
-]
+];
+
+//*Not working need help 
+// Reset the value of the input field
+// const input = document.getElementById('#task-input');
+// input.value = '';
 
 init();
 
@@ -50,10 +55,18 @@ function render(){
         markup += `<li class="todo-items">
         <input type="checkbox" id="check" ${todo.comleted ? 'checked' : ''}>
         <label for="check">${todo.task}</label>
-        <span>X</span>
+        <span></span>
       </li>`
     }
     todoList.innerHTML = markup;
-}
-        
-        
+    }
+// This section handling the check box functions    
+    // Get the checkbox element
+const checkbox = document.getElementById('checkbox');
+    // Add event listener to the checkbox
+checkbox.addEventListener('change', function() {
+    // Get the label element associated with the checkbox
+const label = document.querySelector('label[for="checkbox"]');
+    // Toggle the 'checked' class on the label
+  label.classList.toggle('checked', this.checked);
+});        

@@ -13,24 +13,24 @@
           <h1 class="top-header">Todo List App</h1>
           <div class="second-panel pt1">
             <form class="frm">
-              <input type="text" id="task-input">
+              <input type="text" id="task-input" placeholder="Enter task to add To do list">
                 <div class="rounded-border-gradient">
-                  <button class="add-btn">Add</button>
+                  <button class="add-btn"></button>
                 </div>
               </div>
-              <!-- <button class="add-btn">Add</button> -->
+              <div class="list-ui">
+                <ul class="todo-list">
+                  <li class="todo-items">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">'new phone</label>
+                    <span>''</span>
+                  </li>
+                </ul>
+              </div>
             </form>
-            <div class="list-ui">
-              <ul class="todo-list">
-                <li class="todo-items">
-                  <input type="checkbox" id="check">
-                  <label for="check">'Buy milk'</label>
-                  <span>X</span>
-                </li>
-              </ul>
-            </div>
           <footer>
             <div class="footer-div">
+              <span id="items-q">2 Items left.</span>
               <div class="filter-box">
                 <button class="filter-btn">All</button>
                 <button class="filter-btn">Active</button>
@@ -39,7 +39,6 @@
               </div>
             </div>      
             <div id="items-left">
-              <span>2 Items left.</span>
             </div>
         </footer>
       </div>

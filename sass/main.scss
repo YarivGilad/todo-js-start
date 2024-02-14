@@ -9,138 +9,214 @@
 */
 body{
   @include flex-box($ai:flex-start);
-  background-color: rgb(191, 191, 191);
-  color: rgb(255, 255, 255);
+  background-color: rgba(3, 35, 30, 0.77);
+  color: #81e0cd;
   padding-top: 10rem;
 
   .wrapper{
-    max-width: 600px;
-    margin: 20px auto;
+    width: fit-content;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 55px auto;
     padding: 20px;
-    background-color: #4a4a4a7e;
-    border-radius: 18px;
+    padding-bottom: 6rem;
+    background-color: rgb(3, 35, 30, 1);
+    border-radius: 23px;
     box-shadow: 0px 20px 10px 15px rgba(0, 0, 0, 0.35);
     border: rgba(35, 93, 111, 0.88) inset 9px;
   }
   .top-header{
-    margin-bottom: 2.5rem;
-  }
-//   .second-panel {
-//      padding: 5rem;
-//     background-color: rgba(255, 255, 255, 0.2) 50%, transparent 50%, transparent;
-//     box-shadow: 0 0 20px 15px rgb(0 0 0 / 15%);
-//     border-radius: ($border-r - 13%);
-//     background-color: rgba(223, 223, 223, 0.123);
-//     border: $main-color solid 2px;
-//     // }
-// }
- 
-// .pt1 {
-//     background-size: 50px 50px;
-//     background-color: #343a4045;
-//     background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-//     background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-//     background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-//     background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-//     background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
-// }
-
-
-  .second-panel{
-    padding: 5rem;
-    background-color: rgba(223, 223, 223, 0.123);
-    background-color: #959595;
-    border-radius: 2px 101px / 95px;
-    box-shadow: 0px 10px 6px 6px rgba(0,0,0, 0.15);
-    // border-radius: ($border-r - 13%);
-    // border: rgba(35, 93, 111, 0.55) inset 6px;
-  }
-
-  // .frm{
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 30rem;
-  //   border-radius: 2px 101px / 95px;
-  //   background-color: rgb(67, 67, 67);
-  //   border: $main-color solid 2px;
-  // }
-  // border-radius: $border-r;
-  // border: rgb(255, 0, 0) solid 2px;
-
-  .frm {
-    /* Set the width of the form */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30rem;
-    width: 100%; 
-    /* Add any other styling for the form */
+    font-size: 3.5rem;
+    margin-top: $small-margin;
+    margin-bottom: $small-margin;
+  }
 
-    border-radius: 2px 101px / 95px;
-      background-color: rgb(67, 67, 67);
-      border: $main-color solid 2px;
+  // WORK IN PROGRESS
+  // .pt1 {
+  //     background-size: 50px 50px;
+  //     background-image: linear-gradient(rgba(41, 41, 41, 0.057) 50%, transparent 50%, transparent);
+  // }
+  
+  .second-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85rem;
+    border-radius: 3% / 12%;
+
+    //WORK IN PROGRESS
+    box-shadow: 0px 10px 6px 6px rgba(0,0,0, 0.15);
+    border: rgba(35, 93, 111, 0.15) inset 6px;
+    background-color: rgba(223, 223, 223, 0.123);
+    background-color: #2a968f13;
+  }
+
+  .frm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+    width: 100%;
+  }
+
+  #task-input {
+    width: 5rem;
+    flex: 1;
+    padding: 18px;
+    padding-right: 20rem;
+    border: 1px solid #29766e49;
+    border-radius: 4px;
+    margin-left: 4rem;
+    margin-right: 1rem;
+    //Styling the input text box
+    color: #81e0cd;
+    background-color: rgba(181, 255, 230, 0.137);
   }
   
-  #task-input {
-    width: 100%;
-    flex: 1;
-    padding: 10px;
-    padding-right: 15rem;
-    border: 1px solid #1c1c1c;
-    border-radius: 4px;
-    margin-left: 10rem;
-    margin-right: 1rem;
-    /* Add any other styling for the input */
-
-  }
-
-  // #task-input{
-  //   flex: 1;
-  //   padding: 10px;
-  //   padding-right: 15rem;
-  //   border: 1px solid #1c1c1c;
-  //   border-radius: 4px;
-  //   margin-left: 10rem;
-  //   margin-right: 1rem;
-  // }
+  //Styling the input text box text
+  input[type="text"]::placeholder {
+    color: #81e0cd;
+    text-align:left ;
+}
 
   .list-ui{
     max-width: 600px;
     margin: 20px auto;
     padding: 30px;
+    height:max-content;
     border-radius: 12px;
-    background: linear-gradient(rgba(0, 0, 0, 0.425), rgb(255, 255, 255, 0.155));
-    border: rgba(35, 93, 111, 0.33) inset 3px;
+    background: linear-gradient(rgba(29, 131, 106, 0.765), rgba(3, 85, 62, 0.115));
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+    border: rgba(35, 93, 111, 0.55) inset 6px;
+    // border: rgba(35, 93, 111, 0.33) inset 3px;
   }
 
   .todo-list{
     align-items: start;
-    // margin-top: $small-margin;
     // border: rgb(255, 0, 0) solid 2px;
   }
+
   .todo-items{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     animation: fadeIn 0.5s ease;
   }
-  .add-btn{
-    @include btn-grp;
-    background-color: $main-color;
-    color: #fff;
-    border: rgba(63, 63, 63, 0.399) solid 2px; 
+
+      // Define styles for the checkbox
+      input[type="checkbox"] {
+      // Hide the default checkbox
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      // Define custom checkbox styles
+      width: 20px;
+      height: 20px;
+      border: 10px solid #ccc;
+      border-radius: 3px;
+      outline: none;
+      margin-right: 15px;
+      // Add custom checkbox indicator
+      &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border: 2px solid #333;
+        border-radius: 2px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+      // Define styles for the checked state
+      &:checked {
+        + label {
+          text-decoration-line: line-through;
+          color: #001813;
+        }
+        // Change the appearance of the checkbox indicator
+        &::after {
+          background-color: #333;
+          opacity: 1;
+        }
+      }
+    }
+    
+    // .add-btn{
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
+    // padding-left: 4rem;
+    // padding-right: 4rem;
+    // border-radius: 2px 100px / 95px;
+  //   width: 64px;
+  //   height: 64px;
+  //   background-color: rgb(72, 207, 171);
+  //   border-radius: 50%;
+  //   color: #fff;
+  //   border: rgba(8, 70, 42, 0.63) solid 4px; 
+  // }
+
+  .add-btn {
+
+      /* Your existing styles... */
+
+      background-position: center;
+      background-repeat: no-repeat;
+    
+    
+      width: 64px;
+      height: 64px;
+      background-color: rgb(72, 207, 171);
+      border-radius: 50%;
+      color: #fff;
+      border: rgba(8, 70, 42, 0.63) solid 4px;
+      background-image: url('/Assets/Icons/plus-round-icon.svg');
+      background-size: 60%; /* Adjust the size of the SVG icon */
+      background-position: center; /* Center the SVG icon */
+      background-repeat: no-repeat; /* Ensure the SVG icon is not repeated */
+    }
+    
+    /* Apply styles to the SVG icon itself */
+    .add-btn::before {
+      content: '';
+      display: inline-block;
+      background-color: rgb(207, 72, 117);
+      border-radius: 50%;
+      width: 100%; /* Adjust the width and height as needed */
+      height: 100%;
+      background-image: url('/Assets/Icons/plus-round-icon.svg');
+      background-size: cover;
+      filter: hue-rotate(180deg); /* Rotate the hue to change color */
+    }
+
+    /* Use filter to change the color */
+    .add-btn {
+    filter: hue-rotate(10deg);; /* Rotate the hue to change color */
+  }
+
+  /* Or, use fill if the SVG icon uses <path> elements with fill attributes */
+  .add-btn svg path {
+    fill: rgb(33, 196, 101); /* Change the fill color */
+  }
+  
+  .add-btn:hover {
+    background-color: rgb(35, 111, 89);
   }
 
   .rounded-border-gradient{
     inline-size: var(--size-content-1);
     aspect-ratio: var(--ratio-widescreen);
     padding: 3rem;
-    border: #c300ff solid 2px;
     background: 
     linear-gradient(var(--surface-1), var(--surface-1)) padding-box, 
     var(--gradient-1) border-box;
+    // border: rgba(63, 63, 63, 0.399) solid 2px;
     // border: solid var(--size-2) transparent;
   }
   
@@ -170,33 +246,44 @@ body{
   // }
 
 
-  .add-btn:hover {
-    background-color: $secondary-color;
-  }
   .footer-div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: $small-margin;
     // border: rgb(0, 234, 255) solid 2px;
   }
+
   .filter-box{
-    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15rem;
     // border: rgb(0, 30, 255) solid 2px;
   }
+
+  #items-q{
+    margin-right: 5rem;
+  }
+
   .filter-btn{  
     @include btn-grp;
+    background-color: rgba(29, 100, 100, 0.35);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     padding: $small-margin;
   }
+  
   .filter-btn:hover {
-    background-color: rgba(223, 223, 223, 0.251);
+    background-color: rgba(153, 217, 217, 0.572);
     outline: $main-color solid 2px;
   }
+
   #clear-btn{
     padding: $small-margin;
     // border: rgb(0, 30, 255) solid 2px;
   }
+
   #items-left{
     display: flex;
     justify-content: center;
