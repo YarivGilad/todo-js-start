@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo app</title>
-  <link rel="stylesheet" href="sass/main.scss">
-</head>
-<body>
-  <div class="wrapper">
-    <h1>Todo app</h1>
-    <div class="content">
-      <form action="">
-        <input type="text" placeholder="Your next task" id="input">
-        <button class="add">Add</button>
-      </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+    <link rel="stylesheet" href="sass/main.scss" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Todo app</h1>
+      <div class="content">
+        <form action="">
+          <input type="text" placeholder="Your next task" id="input" />
+          <button class="add">Add</button>
+        </form>
 
-      <ul id="listContainer">
-        <!-- <li class="marked">test</li> -->
-      </ul>
-      <footer class="footer">
-        <span><span class="count">0</span> items left</span>
-        <div class="filter">
-          <button class="btn all">All</button>
-          <button class="btn active">Active</button>
-          <button class="btn completed">Completed</button>
-        </div>
-      </footer>
+        <ul id="listContainer">
+          <!-- <li class="marked">test</li> -->
+        </ul>
+        <footer class="footer">
+          <span><span class="count">0</span> items left</span>
+          <div class="filter">
+            <button class="btn all">All</button>
+            <button class="btn active">Active</button>
+            <button class="btn completed">Completed</button>
+          </div>
+          <div class="clear">
+            <button class="clr">Clear all</button>
+          </div>
+        </footer>
+      </div>
     </div>
-  </div>
-  
-  <script src="js/main.js"></script>
-</body>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
